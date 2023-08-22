@@ -2,12 +2,9 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 @app.route('/play')
-def jugar_default():
-    return jugar(3)
-
 @app.route('/play/<cantidad>')
 @app.route('/play/<cantidad>/<color>')
-def jugar(cantidad,color="turquoise"):
+def jugar(cantidad=3,color="turquoise"):
     if(not isinstance(cantidad,int)):
         try:
             cantidad = int(cantidad)
