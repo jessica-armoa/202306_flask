@@ -15,5 +15,10 @@ def destruir():
   session.pop('contador')
   return redirect('/')
 
+@app.route('/incremento2')
+def contar2():
+  session['contador'] += 1
+  return redirect('/')
+
 if __name__=="__main__":
     app.run(debug=True)

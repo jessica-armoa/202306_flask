@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block estilos %}
+    <style>
+      .card{
+        background-color: green;
+        color: white;
+      }
+    </style>
+{% endblock %}
+
+{% block resultado %}
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">{{numero}} was the number!</h5>
+      <p>{{cantidad}} intentos</p>
+      <a href="/restart" class="btn btn-primary">Play again</a>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'formulario.html' %}
+
+{% block estilos %}
+  {% if pista %}
+    <style>
+      .pista{
+        background-color: red;
+        color: white;
+        padding: 30px;
+      }
+    </style>
+  {% endif %}
+{% endblock %}
+
+{% block pista %}
+  {% if pista %}
+    <div class="m-0 mb-3 row justify-content-center align-items-center">
+      <p class="pista col-auto text-center">Too {{pista}}!</p>
+    </div>
+  {% endif %}
+{% endblock %}
